@@ -1,0 +1,86 @@
+/* Code is written by CHIRAG RAJ */
+body::-webkit-scrollbar {
+  overflow: hidden;
+  display: none;
+}
+body {
+  margin: 0px;
+}
+
+#container {
+  background-image: url("https://media.istockphoto.com/id/1337108175/vector/dark-gray-3d-hexagonal-technology-vector-abstract-background.jpg?s=612x612&w=0&k=20&c=RYHI2M_KPCMORuSJKZ_klHmWURsZpgrnmfyDnvBNM1Y="),
+    url("src/img.jpg");
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rod1 {
+  height: 5vh;
+  width: 20vw;
+  min-width: 180px;
+  /* background-color: #a41ec6; */
+  background-image: linear-gradient(to right, #a41ec6, #307aa5);
+  border-radius: 25px;
+  position: absolute;
+  top: 0px;
+  border: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#ball {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  /* background-color: #307aa5; */
+  background-image: radial-gradient(#a41ec6, rgb(30, 57, 115));
+  position: absolute;
+  border: 1px solid black;
+  top: 50%;
+  margin-top: -35px;
+}
+
+#rod2 {
+  height: 5vh;
+  width: 20vw;
+  min-width: 180px;
+  /* background-color: #a41ec6; */
+  background-image: linear-gradient(to right, #307aa5, #a41ec6);
+  border-radius: 25px;
+  position: absolute;
+  bottom: 0px;
+  border: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* ball moving transition code */
+.animate-top-right {
+  transition: transform linear 8s;
+  transform: translateX(2000px) translateY(-2000px);
+}
+
+.animate-bottom-right {
+  transition: transform linear 8s;
+  transform: translateX(2000px) translateY(2000px);
+}
+.animate-top-left {
+  transition: transform linear 8s;
+  transform: translateX(-2000px) translateY(-2000px);
+}
+.animate-bottom-left {
+  transition: transform linear 8s;
+  transform: translateX(-2000px) translateY(2000px);
+}
